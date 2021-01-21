@@ -12,6 +12,14 @@
     .head_text {
         color: white;
     }
+
+    .post_image {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
     
 </style>
 <div class="container">
@@ -21,6 +29,7 @@
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
         <p class="card-text ">{{ post.content | safe }}</p>
+        <img class="post_image" src="{{ post.image.url }}" alt="{{ post.title }}">
       </div>
     </div>
   </div>
