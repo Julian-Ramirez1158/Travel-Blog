@@ -33,3 +33,9 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+def about(request):
+    return render(request, 'about.html')
+
+def faq(request):
+    return render(request, 'faq.html')
