@@ -1,0 +1,82 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<style>
+    
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #490763;
+    }
+
+    #accordionExample {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .accordionButton {
+        color: black;
+        font-size: 1.8rem;
+    }
+    
+
+    
+</style>
+
+<div class="container">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left accordionButton" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Django?
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    In fall 2003, the World Online developers (Adrian Holovaty and Simon Willison) ditched PHP and began using Python to develop its websites. 
+                    As they built intensive, richly interactive sites such as Lawrence.com, they began to extract a generic Web development framework that let them build Web applications more and more quickly. 
+                    They tweaked this framework constantly, adding improvements over two years. In the summer of 2005, World Online decided to open-source the resulting software, Django. 
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed accordionButton" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Is Django stable?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes, it’s quite stable. Companies like Disqus, Instagram, Pinterest, and Mozilla have been using Django for many years. Sites built on Django have weathered traffic spikes of over 50 thousand hits per second.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed accordionButton" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What does the Django architecture consist of?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Django follows a MVC-MVT architecture. MVC stands for Model View Controller. It is used for developing the web publications, where we break the code into various segments. 
+                    Here we have 3 segments, model, view, and a controller.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{%endblock%}
