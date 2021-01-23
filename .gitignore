@@ -138,4 +138,5 @@ dmypy.json
 cython_debug/
 
 # SQlite Databases
-*.sqlite3
+*.sqlite3.
+*.pyc
