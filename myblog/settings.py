@@ -1,4 +1,5 @@
 """
+$ heroku config:set DISABLE_COLLECTSTATIC=1
 
 Django settings for myblog project.
 
